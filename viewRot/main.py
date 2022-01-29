@@ -1,6 +1,7 @@
 import numpy
 import turtle
 import json
+from tkinter import *
 
 # Set up Turtle and window
 turtle.setup(750, 750)  # Determine the window size
@@ -77,5 +78,7 @@ for i in range(0, js[0]['NFRM']):
     drawline(arr[i]*int(multiplier), radius, bob, i)
 
 
+ts = bob.getscreen()
+ts.getcanvas().postscript(file="out.eps")
 
 turtle.done()
